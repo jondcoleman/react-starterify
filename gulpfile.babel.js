@@ -11,12 +11,12 @@ import rimraf from 'rimraf';
 import notify from 'gulp-notify';
 import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
-import postcss from 'gulp-postcss';
+//import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import nested from 'postcss-nested';
 import vars from 'postcss-simple-vars';
 import extend from 'postcss-simple-extend';
-import cssnano from 'cssnano';
+//import cssnano from 'cssnano';
 import htmlReplace from 'gulp-html-replace';
 import imagemin from 'gulp-imagemin';
 import pngquant from 'imagemin-pngquant';
@@ -85,15 +85,15 @@ gulp.task('browserify', () => {
   .pipe(gulp.dest(paths.distJs));
 });
 
-gulp.task('styles', () => {
-  gulp.src(paths.srcCss)
-  .pipe(rename({extname: ".css"}))
-  .pipe(sourcemaps.init())
-  .pipe(postcss([vars, extend, nested, autoprefixer, cssnano]))
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(paths.dist))
-  .pipe(reload({stream: true}));
-});
+// gulp.task('styles', () => {
+//   gulp.src(paths.srcCss)
+//   .pipe(rename({extname: ".css"}))
+//   .pipe(sourcemaps.init())
+//   .pipe(postcss([vars, extend, nested, autoprefixer, cssnano]))
+//   .pipe(sourcemaps.write('.'))
+//   .pipe(gulp.dest(paths.dist))
+//   .pipe(reload({stream: true}));
+// });
 
 gulp.task('htmlReplace', () => {
   gulp.src('index.html')
