@@ -1,14 +1,19 @@
-import React from 'react';
-import {Link}  from 'react-router';
-import packageJSON from '../../package.json';
+/* eslint react/prefer-stateless-function: 0 */
+
+import React from 'react'
+import { Link } from 'react-router'
+import packageJSON from '../../package.json'
 
 export default React.createClass({
+  propTypes: {
+    children: React.PropTypes.element
+  },
   returnSomething(something) {
-    //this is only for testing purposes. Check /test/components/App-test.js
-    return something;
+    // this is only for testing purposes. Check /test/components/App-test.js
+    return something
   },
   render() {
-    const version = packageJSON.version;
+    const version = packageJSON.version
 
     return (
       <div>
@@ -23,4 +28,4 @@ export default React.createClass({
       </div>
     )
   }
-});
+})

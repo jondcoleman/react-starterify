@@ -9,6 +9,7 @@
             "never"
         ],
         "comma-dangle": 0,
-        "arrow-body-style": 0
+        "arrow-body-style": 0,
+        "react/prefer-es6-class": 0
     }
 }
